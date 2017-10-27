@@ -1,0 +1,99 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Coming Soon', cursive;
+    color: rgb(51, 51, 51);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../images/background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+/*
+===============
+Header styling
+===============
+*/
+
+header {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbar.bg-dark {
+    opacity: 0.9;
+}
+
+.intro h1 {
+    font-family: 'Great Vibes', cursive;
+}
+
+.intro {
+    color: #fff;
+    text-align: center;
+    width: 100%;
+}
+
+#salut {
+    display: block;
+    text-align: center;
+}
+
+/*
+===================
+Portfolio section
+===================
+*/
+.portfolio-showcase {
+    margin-top: 1.5rem;
+}
+
+/*
+================
+Footer
+================
+*/
+.social-icons img {
+    height: 1.5rem;
+    margin-right: 1.0rem;
+}
+
+.jumbotron {
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding: 2rem;
+}
+
+h4 {
+    margin-bottom: 2rem;
+}
+
+
+/*
+========================
+Media queries
+========================
+*/
+
+@media only screen and (min-width: 1025px) {
+    .jumbotron {
+        filter: grayscale(100%);
+        transition: filter 0.3s ease-in-out;
+    }
+    .jumbotron:hover {
+        filter: grayscale(0);
+    }
+}
+
+@media only screen and (max-width: 400px) {
+    .social-icons img {
+        margin-right: 0.5rem;
+    }
+}
