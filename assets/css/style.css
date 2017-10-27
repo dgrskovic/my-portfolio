@@ -6,6 +6,7 @@ body {
 body {
     font-family: 'Coming Soon', cursive;
     color: rgb(51, 51, 51);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0,0,0,0.5)), to(rgba(0, 0, 0, 0.5))), url(../images/background.jpg);
     background: linear-gradient(rgba(0,0,0,0.5), rgba(0, 0, 0, 0.5)), url(../images/background.jpg);
     background-position: center;
     background-size: cover;
@@ -22,9 +23,15 @@ Header styling
 header {
     width: 100%;
     height: 100vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    align-items: center;
-    justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
 }
 
 .navbar.bg-dark {
@@ -84,11 +91,16 @@ Media queries
 
 @media only screen and (min-width: 1025px) {
     .jumbotron {
-        filter: grayscale(100%);
+        -webkit-filter: grayscale(100%);
+                filter: grayscale(100%);
+        -webkit-transition: -webkit-filter 0.3s ease-in-out;
+        transition: -webkit-filter 0.3s ease-in-out;
         transition: filter 0.3s ease-in-out;
+        transition: filter 0.3s ease-in-out, -webkit-filter 0.3s ease-in-out;
     }
     .jumbotron:hover {
-        filter: grayscale(0);
+        -webkit-filter: grayscale(0);
+                filter: grayscale(0);
     }
 }
 
